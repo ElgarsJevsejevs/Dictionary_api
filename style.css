@@ -1,0 +1,236 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.font_name option[value="Courier"] {
+    font-family: 'Courier New', Courier, monospace;
+}
+.font_name option[value="Serif"] {
+    font-family: sans-serif
+}
+.font_name option[value="Arial"] {
+    font-family: Arial, Helvetica, sans-serif
+}
+.font_name option[value="Verdana"] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.light-mode{
+    background-color: white;
+    color: black;
+}
+.dark-mode {
+    background-color: rgb(29, 28, 28);
+    color: white;
+}
+.dark-mode .font_name {
+    color: white; 
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#book_img {
+    width: 100px;
+    height: 60px;
+}
+.font_name{
+    margin-left: 200px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    padding: 0px;
+    font-size: 16px;
+    outline: none;
+    font-weight: 700;
+}
+.font_name option {
+    background-color: white;
+    color: black; 
+}
+#moon_img{
+    width: 40px;
+    height: 40px;
+}
+.font_container{
+    display: flex;
+    align-items: center;
+}
+label {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    display: block;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(221, 214, 214, 0.4), inset 0px -5px 15px rgba(95, 86, 86, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+label::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    background: linear-gradient(90deg, rgb(255, 255, 255), rgb(0, 0, 0));
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+#darkmode{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input:checked + label:after{
+    left: 39px;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, rgb(25rgb(6, 6, 51)55, 255), blue);
+}
+label:active::after{
+    width: 30px;
+}
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 40px;
+    width: 100vw;
+    height: 100vh;
+
+}
+.main_container2 {
+    width: 600px;
+}
+.search_box{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+#search_img{
+    width: 50px;
+    height: 45px;
+}
+#search_button{
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+#input_word{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(179, 174, 179, 0.363);
+    font-weight: 600;
+    width: 180px;
+
+    
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#go {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+#go_img{
+    width: 100px;
+    height: 100px;
+}
+#synonyms_container, .source_container{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+#source_link{
+    color: rgb(131, 126, 126);
+}
+h1 {
+    font-size: 70px;
+}
+#rephrase{
+    margin-top: -45px;
+    color: rgb(167, 18, 197);
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+h3{
+    font-style: italic;
+    font-size: 20px;
+}
+#meaning{
+    color: gray;
+    font-size: 20px;
+    margin-top: 35px;
+}
+li {
+    list-style: none;
+    margin: 14px;
+}
+ul li:before {
+    content: "\2022";
+    color: rgb(167, 18, 197);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em;
+    
+}
+#synonym_id{
+    color: gray;
+    font-size: 20px;
+}
+#synonym_id2 {
+    color: rgb(167, 18, 197);
+    font-size: 20px;
+}
+#source_id {
+    color: gray;
+}
+#expmple_p{
+    color: gray;
+}
+hr {
+    border-top: 1px solid rgba(179, 174, 179, 0.363);
+    margin-top: -22px;
+}
+@media screen and (max-width: 600px) {
+    .main_container2{
+        width: 100%;
+        height: 100%;
+    }
+    .main_container {
+        padding: 20px;
+    }
+    @media  screen and (max-width: 500px) {
+        label {
+            margin-right: 10px;
+        }
+        
+    }
+    @media  screen and (max-width: 450px) {
+        label {
+            margin-right: 20px;
+        }
+        
+    }
+    @media  screen and (max-width: 420px) {
+        .font_name{
+            margin-left: -10px;
+        }
+        .main_container{
+            min-width: 360px;
+        }
+      
+        
+        
+    }
+}

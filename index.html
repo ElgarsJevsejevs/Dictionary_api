@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    
+</head>
+<body class="light-mode font_change">
+    <audio id="sound"></audio>
+<div class="main_container light-mode">
+    <div class="main_container2 light-mode">
+    <header class="header">
+        <img src="lmproulx-notebook.svg" id="book_img">
+        <div class="font_container">
+        <select name="font_name" class="font_name light-mode" onchange="changeText()">
+            <option value="Courier">Courier New</option>
+            <option value="Serif">Sans Serif</option>
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+        </div>
+        <input type="checkbox" id="darkmode"/>
+        <label for="darkmode" onclick="darkMode()"></label>
+        <img src="spite_moon.svg" id="moon_img">
+        
+    </header>
+    <hr>
+    <div class="search_box">
+        <input type="text" placeholder="input word" id="input_word"/>
+        <button id="search_button"><img src="icons8-search-49.png" id="search_img"></button>
+    </div>
+    <div class="content_container" id="result">
+        <div class="heading">
+            <h1>Word</h1>
+            <button id="go"><img src="Go.png" id="go_img"></button>
+        </div>
+        <div class="details">
+            <p id="rephrase"></p>
+            <h3></h3>
+            <p id="meaning"></p>
+            <ul>
+            </ul>
+            <div id="synonyms_container">
+            <p id="synonym_id"></p>
+            <p id="synonym_id2"></p>
+            </div>
+        </div>
+        <div class="details2">
+            <h3></h3>
+            <p id="meaning"></p>
+            <ul>
+                
+                <p id="expmple_p"></p>
+            </ul>
+            <div class="source_container">
+            <p id="source_id"></p>
+            <a href="" id="source_link"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="script.js">
+
+</script>
